@@ -28,47 +28,49 @@ for (let i = 0; i < items.length; i++) {
     }
     else {
         items[i].addEventListener('click', () => {
-            switch (j) {
-                case 1:
-                    timeCountDount = parseInt(items[i].innerHTML);
-                    sc.innerHTML = timeCountDount + "";
-                    break;
-                case 2:
-                    timeCountDount = timeCountDount * 10 + parseInt(items[i].innerHTML);
-                    sc.innerHTML = timeCountDount + "";
-                    break;
-                case 3:
-                    timeCountDount = timeCountDount * 10 + parseInt(items[i].innerHTML);
-                    mc.innerHTML = Math.floor(timeCountDount / 100) + "";
-                    sc.innerHTML = timeCountDount % 100 + "";
-                    break;
-                case 4:
-                    timeCountDount = timeCountDount * 10 + parseInt(items[i].innerHTML);
-                    mc.innerHTML = Math.floor(timeCountDount / 100) + "";
-                    sc.innerHTML = timeCountDount % 100 + "";
-                    break;
-                case 5:
-                    timeCountDount = timeCountDount * 10 + parseInt(items[i].innerHTML);
-                    hc.innerHTML = Math.floor(timeCountDount / 10000) + "";
-                    mc.innerHTML = Math.floor((timeCountDount - parseInt(hc.innerHTML) * 10000) / 100) + "";
-                    sc.innerHTML = timeCountDount % 100 + "";
-                    break;
-                case 6:
-                    timeCountDount = timeCountDount * 10 + parseInt(items[i].innerHTML);
-                    hc.innerHTML = Math.floor(timeCountDount / 10000) + "";
-                    mc.innerHTML = Math.floor((timeCountDount - parseInt(hc.innerHTML) * 10000) / 100) + "";
-                    sc.innerHTML = timeCountDount % 100 + "";
-                    break;
-                default:
-                    break;
+            if (j < 7) {
+                switch (j) {
+                    case 1:
+                        timeCountDount = parseInt(items[i].innerHTML);
+                        sc.innerHTML = timeCountDount + "";
+                        break;
+                    case 2:
+                        timeCountDount = timeCountDount * 10 + parseInt(items[i].innerHTML);
+                        sc.innerHTML = timeCountDount + "";
+                        break;
+                    case 3:
+                        timeCountDount = timeCountDount * 10 + parseInt(items[i].innerHTML);
+                        mc.innerHTML = Math.floor(timeCountDount / 100) + "";
+                        sc.innerHTML = timeCountDount % 100 + "";
+                        break;
+                    case 4:
+                        timeCountDount = timeCountDount * 10 + parseInt(items[i].innerHTML);
+                        mc.innerHTML = Math.floor(timeCountDount / 100) + "";
+                        sc.innerHTML = timeCountDount % 100 + "";
+                        break;
+                    case 5:
+                        timeCountDount = timeCountDount * 10 + parseInt(items[i].innerHTML);
+                        hc.innerHTML = Math.floor(timeCountDount / 10000) + "";
+                        mc.innerHTML = Math.floor((timeCountDount - parseInt(hc.innerHTML) * 10000) / 100) + "";
+                        sc.innerHTML = timeCountDount % 100 + "";
+                        break;
+                    case 6:
+                        timeCountDount = timeCountDount * 10 + parseInt(items[i].innerHTML);
+                        hc.innerHTML = Math.floor(timeCountDount / 10000) + "";
+                        mc.innerHTML = Math.floor((timeCountDount - parseInt(hc.innerHTML) * 10000) / 100) + "";
+                        sc.innerHTML = timeCountDount % 100 + "";
+                        break;
+                    default:
+                        break;
+                }
+                if (parseInt(hc.innerHTML) < 10 && hc.innerHTML != "00")
+                    hc.innerHTML = "0" + hc.innerHTML;
+                if (parseInt(mc.innerHTML) < 10 && mc.innerHTML != "00")
+                    mc.innerHTML = "0" + mc.innerHTML;
+                if (parseInt(sc.innerHTML) < 10 && sc.innerHTML != "00")
+                    sc.innerHTML = "0" + sc.innerHTML;
             }
             j++;
-            if (parseInt(hc.innerHTML) < 10 && hc.innerHTML != "00" && j > 6)
-                hc.innerHTML = "0" + hc.innerHTML;
-            if (parseInt(mc.innerHTML) < 10 && mc.innerHTML != "00")
-                mc.innerHTML = "0" + mc.innerHTML;
-            if (parseInt(sc.innerHTML) < 10 && sc.innerHTML != "00")
-                sc.innerHTML = "0" + sc.innerHTML;
         })
     }
 }
