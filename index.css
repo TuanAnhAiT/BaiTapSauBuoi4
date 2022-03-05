@@ -1,0 +1,56 @@
+.stop-watch, .countdown{
+    margin: auto;
+    width: 500px;
+    height: 100px;
+    border: 3px solid black;
+    border-radius: 15px;
+    font-size: 96px;
+    position: relative;
+}
+.watch{
+    position: absolute;
+    top: -35px;
+    width: 100%;
+}
+p{margin: 0;}
+.micro-seconds{
+    font-size: 18px;
+    padding-left: 400px;
+    padding-top: 72px;
+}
+.button, .set-time{
+    width: 500px;
+    margin: auto;
+}
+.button .btn{
+    width: 150px;
+    height: 60px;
+    border: 3px solid black;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.btn.green{
+    background-color: rgb(38, 206, 38);
+}
+.btn.red{
+    background-color: rgb(250, 42, 42);
+}
+.btn.blue{
+    background-color: rgb(74, 74, 243);
+}
+.item{
+    width: 11%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: rgb(38, 206, 38);
+    text-align: center;
+    margin: 5px;
+    font-weight: bold;
+}
+.gray{
+    background-color: gray;
+}
+.hide{
+    display: none!important;
+}
