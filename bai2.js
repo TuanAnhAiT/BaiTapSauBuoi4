@@ -63,7 +63,7 @@ for (let i = 0; i < items.length; i++) {
                     break;
             }
             j++;
-            if (parseInt(hc.innerHTML) < 10 && hc.innerHTML != "00")
+            if (parseInt(hc.innerHTML) < 10 && hc.innerHTML != "00" && j > 6)
                 hc.innerHTML = "0" + hc.innerHTML;
             if (parseInt(mc.innerHTML) < 10 && mc.innerHTML != "00")
                 mc.innerHTML = "0" + mc.innerHTML;
